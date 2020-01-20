@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "flip-book-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/flipBookWebPart/FlipBookWebPartWebPart.js",
+          "manifest": "./src/webparts/flipBookWebPart/FlipBookWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "sp-init": {
+      "path": "https://devserver.sharepoint.com/sites/Radius/_layouts/15/init.js",
+      "globalName": "$_global_init"
+    },
+    "microsoft-ajax": {
+      "path": "https://devserver.sharepoint.com/sites/Radius/_layouts/15/MicrosoftAjax.js",
+      "globalName": "Sys",
+      "globalDependencies": [
+        "sp-init"
+      ]
+    },
+    "sp-runtime": {
+      "path": "https://devserver.sharepoint.com/sites/Radius/_layouts/15/SP.Runtime.js",
+      "globalName": "SP",
+      "globalDependencies": [
+        "microsoft-ajax"
+      ]
+    },
+    "sharepoint": {
+      "path": "https://devserver.sharepoint.com/sites/Radius/_layouts/15/SP.js",
+      "globalName": "SP",
+      "globalDependencies": [
+        "sp-runtime"
+      ]
+    },
+    "@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js",
+    "jquery": {
+      "path": "node_modules/jquery/dist/jquery.min.js",
+      "globalName": "jQuery"
+    },
+    "jqueryui": "node_modules/jquery-ui-dist/jquery-ui.min.js",
+    "bootstrap": {
+      "path": "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "globalName": "bootstrap"
+    },
+    "modernizr": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "turn": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/turn.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "wait": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/wait.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jquery-mousewheel": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/jquery-mousewheel.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jquery-fullscreen": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/jquery.fullscreen.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jquery-address": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/jquery.address-1.6.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "pdf": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/pdf.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "wowbook": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/wow_book.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "helper": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/helper.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "onload": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/onload.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "hammerjs": {
+      "path": "./src/webparts/flipBookWebPart/assets/js/hammer.min.js",
+      "globalName": "hammerjs"
+    },
+    "yepnope": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/yepnope/2.0.0/yepnope.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "LoadA": {
+      "path": "./src/webparts/LoadA.js",
+      "globalName": "LoadA",
+      "globalDependencies": [
+        "modernizr",
+        "turn"
+      ]
+    }
+  },
+  "localizedResources": {
+    "FlipBookWebPartWebPartStrings": "lib/webparts/flipBookWebPart/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
